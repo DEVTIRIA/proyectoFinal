@@ -1,5 +1,5 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@ taglib prefix="c" uari="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <!DOCTYPE html>
@@ -31,21 +31,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
     
-   		 <script >var WEB_SERVER='localhost:8080/baseWeb';</script>
-	    
-		<script  src="lib/angular-1.3.15/angular.js"></script>	    		
-	    <script  src="lib/angular-1.3.15/angular-route.js"></script>
-	    <script  src="lib/angular-1.3.15/angular-ui-tree.js"></script>
-	    <script  src="lib/angular-1.3.15/i18n/angular-locale_es-co.js"></script>
-	    <script  src="lib/bootstrap/angular-1.3.15/ui-bootstrap-tpls-0.11.2.min.js"></script>    	    	          
-	    	    
-    	<!--ng grid...-->
-	    <script  src="lib/angular-1.3.15/angular-ui-ng-grid/3.0/jquery.min.js"></script>
-    	<script  src="lib/angular-1.3.15/angular-ui-ng-grid/3.0/ng-grid.debug.js"></script>
-    	
-    	<script  src="lib/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    	<script  src="lib/bootstrap/3.1.1/js/bootstrap.js"></script>  
-	
+   		 
 </head><!--Head Fin-->
 
 <body class="homepage">
