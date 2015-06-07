@@ -1,4 +1,4 @@
-package com.proyectosena.controller.rol; 
+package com.proyectosena.controller.rol;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -33,11 +33,11 @@ public class CRol {
 		return "proyectosena/rol/Rol";
 	}
 	
-	@RequestMapping(value = "/{idrol}.json", method = RequestMethod.GET, produces={"application/json"})
+	@RequestMapping(value = "/{rol_rol}.json", method = RequestMethod.GET, produces={"application/json"})
 	@ResponseBody
-	public String list(@PathVariable("idrol") Long idrol){
+	public String list(@PathVariable("rol_rol") Long rol_rol){
 		
-		return this.rolService.list(idrol);
+		return this.rolService.list(rol_rol);
 	}
 	
 	@RequestMapping(value = "/listAll.json", params = {"page","pageSize"},  method = RequestMethod.GET, produces={"application/json"})

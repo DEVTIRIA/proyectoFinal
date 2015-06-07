@@ -33,43 +33,43 @@ public class Rol {
 	                 initialValue = 1,                //<= Valor inicial de la llave primario
 	                 allocationSize = 1)              //<= Valor a buscar por medio de la llave primaria
 	@GeneratedValue(strategy = GenerationType.TABLE, generator = "rol_GEN")  
-	@Column(name = "IDROL")
-	protected Long idrol; 
+	@Column(name = "ROL_ROL")
+	protected Long rol_rol; 
 	 
-	@Column(name = "NOMBRE")
-	protected String nombre; 
+	@Column(name = "ROL_NOMBRE")
+	protected String rol_nombre; 
 
 	public Rol(){
 	
 	}
 
-	public Long getIdrol(){
-		return idrol;
+	public Long getRol_rol(){
+		return rol_rol;
 	}
 	
-	public void setIdrol(Long idrol){
-		this.idrol = idrol;
+	public void setRol_rol(Long rol_rol){
+		this.rol_rol = rol_rol;
 	}
 
-	public String getNombre(){
-		return nombre;
+	public String getRol_nombre(){
+		return rol_nombre;
 	}
 	
-	public void setNombre(String nombre){
-		this.nombre = nombre;
+	public void setRol_nombre(String rol_nombre){
+		this.rol_nombre = rol_nombre;
 	}
 
 
 	static public String[] getNames(){
-		return new String[]{ "IDROL", "NOMBRE" };
+		return new String[]{ "ROL_ROL", "ROL_NOMBRE" };
 	}		
 	
 	static public String getColumnNames(){
-		return " IDROL, NOMBRE ";
+		return " ROL_ROL, ROL_NOMBRE ";
 	}
 	
 	public String toString(){
-		return " IDROL: "+ this.idrol 
-			+" NOMBRE: "+ this.nombre ;
+		return " ROL_ROL: "+ this.rol_rol 
+			+" ROL_NOMBRE: "+ this.rol_nombre ;
 	}
 }

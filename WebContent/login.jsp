@@ -39,9 +39,10 @@
                     </div>
                     <div class="col-sm-6 col-xs-12">
                        <div class="social">
-                            <a href="login.jsp">Iniciar Sesion </a>
-                           <i style="color:#FFFFFF" class="fa fa-angle-up"></i>
-                           <a href="Registro.html">Registrarse </a>
+                            <i style="color:#9FEEFF" class="fa fa-user"> </i>
+                                <a href="login.jsp">Iniciar Sesion </a>
+                            <i style="color:#9FEEFF" class="fa fa-star"></i>
+                                <a href="Registro.html">Registrarse </a>
                             
                        </div>
                     </div>

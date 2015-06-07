@@ -10,20 +10,20 @@
                            http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 
 	<security:http use-expressions="true" access-denied-page="/denied.jsp">
-		<security:form-login login-page="/login.jsp" authentication-failure-url="/login.jsp?login_error=true" default-target-url="/perfil.jsp"/>
+		<security:form-login login-page="/login.jsp" authentication-failure-url="/login.jsp?login_error=true" default-target-url="/index.jsp#/Index"/>
 		
-		<security:logout/>		
+		<security:logout logout-success-url="/login.jsp"/>		
 	</security:http>
 	
 	<security:authentication-manager>
 		<security:authentication-provider>
 			<security:jdbc-user-service data-source-ref="dataSource"
-				users-by-username-query="select usuario,contrasena,enabled from usuario where usuario=?"
-				authorities-by-username-query="select usuario.usuario,rol.nombre 
-											from usuario
-											join usuario_rol on (usuario_rol.USUARIO_IDUSUARIO=usuario.IDUSUARIO)
-											join rol on (rol.IDROL=usuario_rol.ROL_IDROL)
-											where usuario.usuario=?" />
+				users-by-username-query="select user_nick,user_pass,user_enabled from user_2 where user_nick=?"
+				authorities-by-username-query="select user_2.user_nick,rol.rol_nombre 
+											from user_2
+											join inter_user_rol on (inter_user_rol.inter1_user=user_2.user_user)
+											join rol on (rol.rol_rol=inter_user_rol.inter1_rol)
+											where user_2.user_nick=?" />
 		</security:authentication-provider>
 	</security:authentication-manager>
 

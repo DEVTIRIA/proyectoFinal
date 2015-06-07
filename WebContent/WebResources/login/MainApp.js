@@ -1,27 +1,27 @@
-var MainApp=angular.module('MainApp', ['ui.tree', 'ngGrid', 'ngRoute', 'ui.bootstrap' ]);  
+var MainApp=angular.module('MainApp', ['ngGrid', 'ngRoute']);  
 
 MainApp.config(['$routeProvider',
    	function($routeProvider) {
    	  $routeProvider.
-   	    when('/FrmPerfil', {
+   	    when('/Servicio', {
    	      templateUrl: function(params) {
-   	          return  WEB_SERVER+'FrmPerfil/';
+   	          return  WEB_SERVER+'Catalogo/Servicio';
    	      },
-   	      controller: 'FrmPerfilController'
+   	      controller: 'servicioController'
    	    }).   	  
    	    
-   	    when('/FrmPerfil', {
+   	    when('/Catalogo', {
   	      templateUrl: function(params) {
-  	          return  WEB_SERVER+'FrmPerfil/';
+  	          return  WEB_SERVER+'Catalogo/';
   	      },
-  	      controller: 'FrmPerfilController'
+  	      controller: 'catalogoController'
   	    }).  
   	    
-  	    when('/FrmPerfil', {
+  	    when('/Index', {
    	      templateUrl: function(params) {
-   	          return  WEB_SERVER+'FrmPerfil/';
+   	          return  WEB_SERVER+'User2/Index';
    	      },
-   	      controller: 'FrmPerfilController'
+   	      controller: 'indexController'
    	    }).   	  
    	    
    	    when('/FrmPerfil', {

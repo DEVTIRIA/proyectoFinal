@@ -49,7 +49,7 @@ public class RolRepositoryImpl implements RolRepository{
 		try{
 			String sql = "select "+Rol.getColumnNames()
 					   + "from Rol "
-					   + "where idrol = :id ";
+					   + "where rol_rol = :id ";
 						
 			Query query = getSession().createSQLQuery(sql)
 						 .addEntity(Rol.class)					
@@ -144,8 +144,8 @@ public class RolRepositoryImpl implements RolRepository{
 	
 	/**
 	 * Metodo para ingresar un registro de la tabla Rol
-	 * @value idrol
-	 * @value nombre
+	 * @value rol_rol
+	 * @value rol_nombre
 	 * @return Rol = objeto de la case Rol que contiene los datos ingresados
 	 * @throws Exception
 	 */
