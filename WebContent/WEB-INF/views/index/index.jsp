@@ -180,14 +180,12 @@
                     </center>
                 </div>
 
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.jsp#/Index">Inicio</a></li>
-                        <li><a href="#/Repuesto">Repuestos</a></li>
-                        <li><a href="#/Servicio">Servicios</a></li>
-                        <li><a href="#/Contacto">Contacto</a></li>
-                        <li><a href="#/Perfil">Perfil</a></li>
-                        
+                <div class="col-xs-12  col-sm-4">
+                    <ul class="pull-right">
+                        <li><a href="Index.html">Inicio</a></li>
+                        <li><a href="Nosotros.html">Nosotros</a></li>
+                        <li><a href="Ayuda.html">Ayuda</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>
