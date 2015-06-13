@@ -1,5 +1,6 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <header id="header" data-ng-controller="indexController">
         <div class="top-bar bottom">
             <div class="container">
@@ -40,6 +41,7 @@
                         <li><a href="#/Repuesto">Repuestos</a></li>
                         <li><a href="#/Servicio">Servicios</a></li>
                         <li><a href="#/Contacto">Contacto</a></li>
+                        <li><a href="#/Perfil">Perfil</a></li>
                         
                     </ul>
                 </div>
@@ -162,9 +164,34 @@
         
     </section><!--/#main-slider-->
     
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5">
+                <center>&copy; 2015 <a target="_blank" href="http://www.facebook.com/billy.hetfieldd" title="">Bill Santamaria</a>. All Rights Reserved.
+                </center></div>
+
+                <div class="col-xs-11 col-sm-3 center-block">
+                    <center>
+                    <ul class="social-share ">
+                        <li><a href="https://www.facebook.com/billy.hetfieldd"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                    </center>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.jsp#/Index">Inicio</a></li>
+                        <li><a href="#/Repuesto">Repuestos</a></li>
+                        <li><a href="#/Servicio">Servicios</a></li>
+                        <li><a href="#/Contacto">Contacto</a></li>
+                        <li><a href="#/Perfil">Perfil</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+    
+ 

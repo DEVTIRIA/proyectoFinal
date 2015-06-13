@@ -9,14 +9,7 @@ MainApp.config(['$routeProvider',
    	      },
    	      controller: 'servicioController'
    	    }).   	  
-   	    
-   	    when('/Catalogo', {
-  	      templateUrl: function(params) {
-  	          return  WEB_SERVER+'Catalogo/';
-  	      },
-  	      controller: 'catalogoController'
-  	    }).  
-  	    
+   	     	    
   	    when('/Index', {
    	      templateUrl: function(params) {
    	          return  WEB_SERVER+'User2/Index';
@@ -24,19 +17,28 @@ MainApp.config(['$routeProvider',
    	      controller: 'indexController'
    	    }).   	  
    	    
-   	    when('/FrmPerfil', {
+   	    when('/Contacto', {
   	      templateUrl: function(params) {
-  	          return  WEB_SERVER+'FrmPerfil/';
+  	          return  WEB_SERVER+'User2/Contacto';
   	      },
-  	      controller: 'FrmPerfilController'
-  	    }).  
+  	      controller: 'contactoController'
+  	    }). 
   	    
-  	    when('/FrmPerfil', {
-   	      templateUrl: function(params) {
-   	          return  WEB_SERVER+'FrmPerfil/';
-   	      },
-   	      controller: 'FrmPerfilController'
-   	    }).   	  
+  	  when('/Perfil', {
+  	      templateUrl: function(params) {
+  	          return  WEB_SERVER+'User2/Perfil';
+  	      },
+  	      controller: 'perfilController'
+  	    }).
+  	    
+  	  when('/Login', {
+  	      templateUrl: function(params) {
+  	          return  WEB_SERVER+'User2/Login';
+  	      },
+  	      controller: 'loginController'
+  	    }).
+  	    
+  	       	  
    	    
    	    when('/FrmPerfil', {
   	      templateUrl: function(params) {

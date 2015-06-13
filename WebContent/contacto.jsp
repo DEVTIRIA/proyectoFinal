@@ -28,19 +28,19 @@
 
 <body>
 
-    <header id="header">
-        <div class="top-bar bottom">
+    <header>
+        <div class="top-bar bottom ">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-xs-6">
+                    <div class="col-sm-6 col-xs-12">
                         <div class="top-number"><p><i class="fa fa-phone-square"></i>  +57 301 227 75 30</p></div>
                     </div>
-                    <div class="col-sm-6 col-xs-6">
+                    <div class="col-sm-6 col-xs-12">
                        <div class="social">
                             <i style="color:#9FEEFF" class="fa fa-user"> </i>
                                 <a href="login.jsp">Iniciar Sesion </a>
                             <i style="color:#9FEEFF" class="fa fa-star"></i>
-                                <a href="Registro.html">Registrarse </a>
+                                <a href="registro.jsp">Registrarse </a>
                             
                        </div>
                     </div>
@@ -62,13 +62,11 @@
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.jsp">Inicio</a></li>
-                        <li><a href="Nosotros.html">Bike Co</a></li>
-                        <li><a href="Servicios.html">Servicios</a></li>
-                        <li class="active"><a href="Contacto.html">Contacto</a></li>
-                        <li><a href="login.jsp">Login</a></li>
+                        <li><a href="login.jsp">Inicio</a></li>
+                        <li><a href="servicio.jsp">Servicios</a></li>
+                        <li  class="active"><a href="contacto.jsp">Contacto</a></li>
+                        <li><a href="registro.jsp">Registro</a></li>
                         
-
                     </ul>
                 </div>
             </div><!--container-->
@@ -78,7 +76,7 @@
 
     <section id="contact-info">
         <div class="center">                
-            <h2 style="color:#FFFFFF">Ubicaci√≥n</h2>
+            <h2 style="color:#FFFFFF">UbicaciÛn</h2>
             <p style="color:#FFFFFF" class="lead">Puedes encontrarnos en nuestra oficina en Bogota en los horarios de 8:00 AM - 5:00 PM</p>
         </div>
         <div class="gmap-area">
@@ -97,7 +95,7 @@
                                     <center>
                                     <h2 style="color:#43DFF2">Oficina Principal</h2>
                                     <p style="color:#FFFFFF">Calle 53 Sur # 36 A 93 <br>
-                                    Bogot√° - Colombia</p>
+                                    Bogot· - Colombia</p>
                                     <p style="color:#FFFFFF">Telefono 301-227-7530 <br>
                                     E-mail billy_hetfield@hotmail.com</p>
                                     </center>
@@ -114,11 +112,11 @@
         <div class="container">
             <div class="center">        
                 <h2 style="color:#FFFFFF">Contactanos</h2>
-                <p style="color:#FFFFFF" class="lead">Puedes hacerlo por medio de este peque√±o formulario y nos pondremos en contacto.</p>
+                <p style="color:#FFFFFF" class="lead">Puedes hacerlo por medio de este pequeÒo formulario y nos pondremos en contacto.</p>
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
-                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="mailer.php">
+                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
                     <div class="col-sm-5 col-sm-offset-1">
                         <div class="form-group">
                             <label style="color:#FFFFFF">Nombre *</label>
@@ -174,7 +172,7 @@
 
                 <div class="col-xs-12  col-sm-4">
                     <ul class="pull-right">
-                        <li><a href="index.jsp">Inicio</a></li>
+                        <li><a href="Index.html">Inicio</a></li>
                         <li><a href="Nosotros.html">Nosotros</a></li>
                         <li><a href="Ayuda.html">Ayuda</a></li>
                         <li><a href="Contacto.html">Contacto</a></li>

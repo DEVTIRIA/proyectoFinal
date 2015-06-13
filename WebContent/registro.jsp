@@ -16,6 +16,7 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
     
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -40,7 +41,7 @@
                     <div class="col-sm-6 col-xs-12">
                        <div class="social">
                             <i style="color:#9FEEFF" class="fa fa-user"> </i>
-                                <a href="login.jsp">Iniciar Sesion </a>
+                                <a href="#/Login">Iniciar Sesion </a>
                             <i style="color:#9FEEFF" class="fa fa-star"></i>
                                 <a href="registro.jsp">Registrarse </a>
                             
@@ -64,10 +65,10 @@
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="login.jsp">Inicio</a></li>
+                        <li><a href="login.jsp">Inicio</a></li>
                         <li><a href="servicio.jsp">Servicios</a></li>
                         <li><a href="contacto.jsp">Contacto</a></li>
-                        <li><a href="registro.jsp">Registro</a></li>
+                        <li class="active"><a href="registro.jsp">Registro</a></li>
                         
                     </ul>
                 </div>
@@ -76,65 +77,68 @@
         
     </header><!--header-->
 	
-	<br><br>
 	
-	<div class="contenedor">
-    
-        <c:if test="${!empty param.login_error}">
-            <div style="color: red; margin-bottom:1em; font-size:large;"><center>Usuario o Clave Incorrecto</center> </div>
-        </c:if>
-        
-        <section id="login-page">
+	
+	<section id="registro">
         <div class="container">
-            <div class="center">        	
-                <h2 style="color:#FFFFFF"> Iniciar Sesion</h2>
-                <p style="color:#FFFFFF" class="lead"> Inicia sesion para acceder a los servicios Bike Co</p>
-            </div> 
-            
-            <div class="row contact-wrap center col-md-offset-4 "> 
-                <div class="status alert alert-success" style="display: none"></div>
-                <form id="main-login-form" class="login-form " name="insertar" method="post" action="<c:url value='/j_spring_security_check'/>">
-                    <div class="col-sm-6  block-center">
-                        <div class="form-group">
-                            <label style="color:#FFFFFF">Usuario *</label>
-                            <input type="text" id="Nombre" name="j_username" class="form-control" required="required " placeholder="Nombre de usuario">
-                        </div>
-                        <div class="form-group">
-                            <label style="color:#FFFFFF">Contraseña *</label>
-                            <input type="password" id="Email" name="j_password" class="form-control" required="required " placeholder="Contrasena">
-                        </div>
-						<div class="form-group">
-                            <button type="submit" name="enviar" value="INICIAR SESIÓN" class="btn btn-primary btn-lg" id="regist">Login</button>
-                        </div>
+            <h2 class="text-center h2-registro tex-color">Regístrate</h2>
+            <div class="col-md-6 col-md-offset-3 tex-color">
+                <form action="">
+                    <div class="col-xs-12">
+                        <input type="text" class="form-control margin-bottom" id="nombre" required="required" placeholder="Nombre de usuario">
                     </div>
-                </form> 
-            </div><!--/.row-->
-        </div><!--/.container-->
-    </section><!--/#contact-page-->
+                    <div class="col-xs-12">
+                        <input type="password" class="form-control margin-bottom" id="password" required="required" placeholder="Contraseña">
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="email" class="form-control margin-bottom" id="email" required="required" placeholder="Correo electrónico">
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="email" class="form-control" id="conf-email" required="required" placeholder="Confirmar correo">
+                    </div>
+                    <div class="col-xs-12 text-left"><p style="font-size:16px;">Fecha de nacimiento: </p></div>
+                    <div class="col-xs-12 col-sm-6 margin-bottom">
+                        <select name="mes" id="mes" class="form-control">
+                            <option value="">Mes</option>
+                            <option value="">Enero</option>
+                            <option value="">Febrero</option>
+                            <option value="">Marzo</option>
+                            <option value="">Abril</option>
+                            <option value="">Mayo</option>
+                            <option value="">Junio</option>
+                            <option value="">Julio</option>
+                            <option value="">Agosto</option>
+                            <option value="">Septiembre</option>
+                            <option value="">Octubre</option>
+                            <option value="">Noviembre</option>
+                            <option value="">Diciembre</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 margin-bottom">
+                        <input type="number" id="dia" name="dia" class="form-control" required="required" placeholder="Día">
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <input type="number" id="ano" name="ano" class="form-control" required="required" placeholder="Año">
+                    </div>
+                    <div class="col-sm-6 margin">
+                        <label for="" class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" required="required" value="option1"> Masculino
+                        </label>
+                        <label for="" class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" required="required" value="option2"> Femenino
+                        </label>
+                    </div>
+                    <div class="col-xs-12">
+                        <p>Al hacer click en Registrarse, aceptas los <a href="#">términos y condiciones</a></p>
+                    </div>
+                    <div class="col-xs-12">
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	<br><br>
     <footer id="footer" class="midnight-blue">

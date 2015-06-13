@@ -28,15 +28,23 @@ public class CUser2 {
 		super();
 	}
 			
-	@RequestMapping("/")
+	@RequestMapping("/Contacto")
 	public String index() {
-		return "/user/usuario";
+		return "/contacto/contacto";
 	}
 	
 	@RequestMapping("/Index")
 	public String indexx() {
 		return "/index/index";
 	}
+	
+	
+	@RequestMapping("/Perfil")
+	public String indexxxxx() {
+		return "/perfil/perfil";
+	}
+	
+	
 	
 	@RequestMapping(value = "/{user_user}.json", method = RequestMethod.GET, produces={"application/json"})
 	@ResponseBody

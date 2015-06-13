@@ -1,4 +1,5 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <header id="header" data-ng-controller="servicioController">
         <div class="top-bar bottom">
             <div class="container">
@@ -11,7 +12,7 @@
                             <i style="color:#9FEEFF" class="fa fa-user"> </i>
                             	<font style="color:#0B72FF">
                                 <sec:authentication var="principal" property="principal" />
-								${principal.username}
+								<a style="color:#0B72FF" href="#/perfil.jsp" /> ${principal.username}</a>
 								<i style="color:#9FEEFF" class="fa fa-key"> </i>
 								<a style="color:#0B72FF" href="<c:url value="j_spring_security_logout" />" > Logout</a>	
 								</font>						                                                  
@@ -39,6 +40,7 @@
                         <li><a href="#/Repuesto">Repuestos</a></li>
                         <li class="active"><a href="#/Servicio">Servicios</a></li>
                         <li><a href="#/Contacto">Contacto</a></li>
+                        <li><a href="#/Perfil">Perfil</a></li>
                         
                     </ul>
                 </div>
@@ -49,7 +51,7 @@
 	<div data-ng-view></div>      
     <section id="feature" class="transparent-bg">
         <div class="container">
-           <div class="center wow fadeInDown">
+           <div class="center wow fadeInDown"><br>
                 <h2 style="color:#FFFFFF">Novedades</h2>
                 <p style="color:#FFFFFF" class="lead">En la actualidad contamos con un gran servicio de busqueda de partes para motocicletas, esta idea surgio por la necesidad de muchos motociclistas que desconocen en muchas ocasiones sitios seguros, cercanos y de calidad para algun repuesto</p>
             </div>
@@ -150,3 +152,18 @@
            </div>
         </div><!--/.container-->
     </section><!--/#feature-->
+    
+     <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">

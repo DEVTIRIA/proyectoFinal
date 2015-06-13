@@ -10,9 +10,9 @@
                            http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 
 	<security:http use-expressions="true" access-denied-page="/denied.jsp">
-		<security:form-login login-page="/login.jsp" authentication-failure-url="/login.jsp?login_error=true" default-target-url="/index.jsp#/Index"/>
+		<security:form-login login-page="/login.jsp#/Login" authentication-failure-url="/login.jsp?login_error=true" default-target-url="/index.jsp#/Index"/>
 		
-		<security:logout logout-success-url="/login.jsp"/>		
+		<security:logout logout-success-url="/login.jsp#/Login"/>		
 	</security:http>
 	
 	<security:authentication-manager>

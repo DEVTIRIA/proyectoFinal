@@ -30,20 +30,20 @@
 
 <body class="homepage">
 
-    <header id="header">
-        <div class="top-bar bottom">
+    <header>
+        <div class="top-bar bottom ">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-xs-6">
+                    <div class="col-sm-6 col-xs-12">
                         <div class="top-number"><p><i class="fa fa-phone-square"></i>  +57 301 227 75 30</p></div>
                     </div>
-                    <div class="col-sm-6 col-xs-6">
+                    <div class="col-sm-6 col-xs-12">
                        <div class="social">
                             <i style="color:#9FEEFF" class="fa fa-user"> </i>
                                 <a href="login.jsp">Iniciar Sesion </a>
                             <i style="color:#9FEEFF" class="fa fa-star"></i>
-                                <a href="Registro.html">Registrarse </a>
-                           
+                                <a href="registro.jsp">Registrarse </a>
+                            
                        </div>
                     </div>
                 </div>
@@ -64,13 +64,11 @@
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.jsp">Inicio</a></li>
-                        <li><a href="Nosotros.html">Bike Co</a></li>
-                        <li  class="active"><a href="Servicios.html">Servicios</a></li>
-                        <li><a href="Contacto.html">Contacto</a></li>
-                        <li><a href="login.jsp">Login</a></li>
+                        <li><a href="login.jsp">Inicio</a></li>
+                        <li  class="active"><a href="servicio.jsp">Servicios</a></li>
+                        <li><a href="contacto.jsp">Contacto</a></li>
+                        <li><a href="registro.jsp">Registro</a></li>
                         
-
                     </ul>
                 </div>
             </div><!--container-->
@@ -204,7 +202,7 @@
 
                 <div class="col-xs-12  col-sm-4">
                     <ul class="pull-right">
-                        <li><a href="index.jsp">Inicio</a></li>
+                        <li><a href="Index.html">Inicio</a></li>
                         <li><a href="Nosotros.html">Nosotros</a></li>
                         <li><a href="Ayuda.html">Ayuda</a></li>
                         <li><a href="Contacto.html">Contacto</a></li>
