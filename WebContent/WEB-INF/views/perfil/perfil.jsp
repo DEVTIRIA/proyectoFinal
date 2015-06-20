@@ -100,5 +100,9 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
     </footer><!--/#footer-->
     </div>
+=======
+    </footer><!--/#footer-->
+>>>>>>> c4fb06493174fe20b1abb56a94d717c073bd8a4e
