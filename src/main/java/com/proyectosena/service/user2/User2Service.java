@@ -10,6 +10,7 @@ package com.proyectosena.service.user2;
   */                          
 
 import java.util.List;
+
 import com.proyectosena.repository.user2.User2;
 
 public interface User2Service{
@@ -25,5 +26,7 @@ public interface User2Service{
 	public void delete(User2 user2);	
 	
 	public int getCount();
+
+	String listUser(String username);
 	
 }

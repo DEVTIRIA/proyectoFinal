@@ -49,6 +49,13 @@ public class CCatalogo {
 		return this.catalogoService.listAll(pageSize, page);
 	}
 	
+	@RequestMapping(value = "/listCatalogo.json", params = {"marca_descri","referencia_nombre","repuesto_tipo"},  method = RequestMethod.GET, produces={"application/json"})
+	@ResponseBody
+	public String listCatalogo(@RequestParam("pageSize") int pageSize, @RequestParam("page") int page){
+	
+		return this.catalogoService.listAll(pageSize, page);
+	}
+	
 	@RequestMapping(value = "/update", method = RequestMethod.POST, produces={"application/json"})
 	@ResponseStatus( HttpStatus.OK )
 	@ResponseBody

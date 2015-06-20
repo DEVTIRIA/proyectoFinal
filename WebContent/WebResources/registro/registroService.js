@@ -1,54 +1,17 @@
 
 var MainApp=angular.module('MainApp');
 
-MainApp.service('usuarioService', function($http, $rootScope) {	    	
+MainApp.service('registroService', function($http, $rootScope) {	    	    	    	
     	
-    	this.getData = function(pageSize, page) {    		    		
-    		return $http({
-    	        method: 'GET',
-    	        url:  WEB_SERVER+'FrmPerfil/listAll.json',
-    	        params: {page: page, pageSize: pageSize }
-    	     });
-    	 }
-    	
-    	this.getI18n = function() {    		    		
-    		return $http({
-    	        method: 'GET',
-    	        url: WEB_SERVER+'FrmI18n/listModulo.json',
-    	        params: {modulo: 'FRM_PERFIL,FRM_PERFMODU,FRM_MODUROPE,FRM_MODULO,FRM_ROLEPERM,FRM_APLICACIONES' }
-    	     });
-    	 }
-    	
-    	this.insertRecord = function(peficons, pefinomb, pefidesc, pefifecr, pefiesta) {    	
-    		
-    		data = {peficons: peficons, pefinomb: pefinomb, pefidesc: pefidesc, pefifecr: pefifecr, pefiesta: pefiesta};
-    		
-    		return $http({
-    	        method: 'POST',
-    	        url: WEB_SERVER+'FrmPerfil/insert',
-    	        data: data
-    	     });
-    	 }
-    	
-		this.updateRecord = function(peficons, pefinomb, pefidesc, pefifecr, pefiesta) {    	
-    		
-			data = {peficons: peficons, pefinomb: pefinomb, pefidesc: pefidesc, pefifecr: pefifecr, pefiesta: pefiesta};
-    		
-			return $http({
-    	        method: 'POST',
-    	        url: WEB_SERVER+'FrmPerfil/update',
-    	        data: dataUpdate
-    	     });
-    	 }
+	this.insertRecord = function(user_cedula, user_nick, user_pass, user_nombre, user_apellido, user_email, user_telefono, user_ubicacion, user_direccion, user_sexo) {    	
 		
-		this.deleteRecord = function(peficons, pefinomb, pefidesc, pefifecr, pefiesta) {    	
-    		
-    		data = {peficons: peficons, pefinomb: pefinomb, pefidesc: pefidesc, pefifecr: pefifecr, pefiesta: pefiesta};
-    		
-    		return $http({
-    	        method: 'POST',
-    	        url: WEB_SERVER+'FrmPerfil/deleteR',
-    	        data: data
-    	     });
-    	 }				
-    });    	
+		data = {user_cedula: user_cedula, user_nick: user_nick, user_pass: user_pass, user_nombre:user_nombre, user_apellido: user_apellido, user_email: user_email, user_telefono: user_telefono, user_ubicacion: user_ubicacion, user_direccion: user_direccion, user_sexo: user_sexo};
+		
+		return $http({
+	        method: 'POST',
+	        url: WEB_SERVER+'User2/insert',
+	        data: data
+	     });
+	 }
+	
+});    	

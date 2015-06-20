@@ -24,4 +24,6 @@ public interface User2Repository {
 	public User2 insert(User2 user2);
 	
 	public int getCount();
+
+	User2 listUser(String username);
 }

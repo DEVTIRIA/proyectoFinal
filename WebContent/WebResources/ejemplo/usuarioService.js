@@ -1,7 +1,7 @@
 
 var MainApp=angular.module('MainApp');
 
-MainApp.service('usuarioService', function($http, $rootScope) {	    	
+MainApp.service('repuestoService', function($http, $rootScope) {	    	
     	
     	this.getData = function(pageSize, page) {    		    		
     		return $http({

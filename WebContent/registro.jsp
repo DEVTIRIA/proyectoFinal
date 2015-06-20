@@ -1,14 +1,30 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app=MainApp>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Login - Bikes Co</title>
+    <title>Registro - Bikes Co</title>
     
+    <script >var WEB_SERVER='http://localhost:8080/baseWeb/sena/';</script>
+    
+    <script  src="lib/angular-1.3.15/angular.js"></script>              
+        <script  src="lib/angular-1.3.15/angular-route.js"></script>
+        <script  src="lib/angular-1.3.15/i18n/angular-locale_es-co.js"></script>
+                
+        <!--ng grid...-->
+        <script  src="lib/angular-1.3.15/angular-ui-ng-grid/3.0/jquery.min.js"></script>
+        <script  src="lib/angular-1.3.15/angular-ui-ng-grid/3.0/ng-grid.debug.js"></script>
+        
+    <script  src="WebResources/login/MainApp.js"></script>  
+    <script  src="WebResources/login/MainController.js"></script>
+    
+    <script  src="WebResources/registro/registroController.js"></script>  
+    <script  src="WebResources/registro/registroService.js"></script>
+        
     <!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +45,7 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
-<body>
+<body data-ng-controller="registroController">
 
     <header>
         <div class="top-bar bottom ">
@@ -41,7 +57,7 @@
                     <div class="col-sm-6 col-xs-12">
                        <div class="social">
                             <i style="color:#9FEEFF" class="fa fa-user"> </i>
-                                <a href="#/Login">Iniciar Sesion </a>
+                                <a href="login.jsp">Iniciar Sesion </a>
                             <i style="color:#9FEEFF" class="fa fa-star"></i>
                                 <a href="registro.jsp">Registrarse </a>
                             
@@ -84,55 +100,47 @@
             <h2 class="text-center h2-registro tex-color">Regístrate</h2>
             <div class="col-md-6 col-md-offset-3 tex-color">
                 <form action="">
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control margin-bottom" id="nombre" required="required" placeholder="Nombre de usuario">
+                	<div class="col-xs-12">
+                        <input type="number" class="form-control margin-bottom" id="cedula" required="required" placeholder="Cedula" data-ng-model="user_cedula">
                     </div>
                     <div class="col-xs-12">
-                        <input type="password" class="form-control margin-bottom" id="password" required="required" placeholder="Contraseña">
+                        <input type="text" class="form-control margin-bottom" id="username" required="required" placeholder="Usuario" data-ng-model="user_nick">
                     </div>
                     <div class="col-xs-12">
-                        <input type="email" class="form-control margin-bottom" id="email" required="required" placeholder="Correo electrónico">
+                        <input type="password" class="form-control margin-bottom" id="password" required="required" placeholder="Contraseña" data-ng-model="user_pass">
                     </div>
                     <div class="col-xs-12">
-                        <input type="email" class="form-control" id="conf-email" required="required" placeholder="Confirmar correo">
+                        <input type="text" class="form-control margin-bottom" id="nombre" required="required" placeholder="Nombre" data-ng-model="user_nombre">
                     </div>
-                    <div class="col-xs-12 text-left"><p style="font-size:16px;">Fecha de nacimiento: </p></div>
-                    <div class="col-xs-12 col-sm-6 margin-bottom">
-                        <select name="mes" id="mes" class="form-control">
-                            <option value="">Mes</option>
-                            <option value="">Enero</option>
-                            <option value="">Febrero</option>
-                            <option value="">Marzo</option>
-                            <option value="">Abril</option>
-                            <option value="">Mayo</option>
-                            <option value="">Junio</option>
-                            <option value="">Julio</option>
-                            <option value="">Agosto</option>
-                            <option value="">Septiembre</option>
-                            <option value="">Octubre</option>
-                            <option value="">Noviembre</option>
-                            <option value="">Diciembre</option>
-                        </select>
+                    <div class="col-xs-12">
+                        <input type="text" class="form-control margin-bottom" id="apellido" required="required" placeholder="Apellido" data-ng-model="user_apellido">
                     </div>
-                    <div class="col-xs-12 col-sm-3 margin-bottom">
-                        <input type="number" id="dia" name="dia" class="form-control" required="required" placeholder="Día">
+                    <div class="col-xs-12">
+                        <input type="email" class="form-control margin-bottom" id="email" required="required" placeholder="Correo electrónico" data-ng-model="user_email">
                     </div>
-                    <div class="col-xs-12 col-sm-3">
-                        <input type="number" id="ano" name="ano" class="form-control" required="required" placeholder="Año">
+                    <div class="col-xs-12 col-md-6">
+                        <input type="number" class="form-control margin-bottom" id="telefono" required="required" placeholder="Telefono" data-ng-model="user_telefono">
                     </div>
+                    <div class="col-xs-12 col-md-6">
+                        <input type="text" class="form-control margin-bottom" id="ubicacion" required="required" placeholder="Ciudad" data-ng-model="user_ubicacion">
+                    </div>
+                     <div class="col-xs-12">
+                        <input type="text" class="form-control" id="direccion" required="required" placeholder="Direccion" data-ng-model="user_direccion">
+                    </div>
+             
                     <div class="col-sm-6 margin">
                         <label for="" class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" required="required" value="option1"> Masculino
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" required="required" value="Masculino" data-ng-model="user_sexo"> Masculino
                         </label>
                         <label for="" class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" required="required" value="option2"> Femenino
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" required="required" value="Femenino" data-ng-model="user_sexo"> Femenino
                         </label>
                     </div>
                     <div class="col-xs-12">
                         <p>Al hacer click en Registrarse, aceptas los <a href="#">términos y condiciones</a></p>
                     </div>
                     <div class="col-xs-12">
-                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                        <button type="submit" class="btn btn-primary" data-ng-click="registrar()" value="login.jsp">Registrarse</button>
                     </div>
                 </form>
             </div>

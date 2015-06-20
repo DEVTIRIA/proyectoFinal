@@ -56,6 +56,17 @@ public class User2ServiceImpl implements User2Service{
 	}
 	
 	@Override
+	@RolesAllowed({"ADMINISTRATOR_ADMINISTRATOR", "CONSULTAR_USER", "APP_USER2__READ"})
+	public String listUser(String username){
+		User2 listAll=user2Repository.listUser(username);
+		
+		Map<String, Object> result = new HashMap<String, Object>();
+		result.put("data", listAll);
+		
+		return gson.toJson(result);	
+	}
+	
+	@Override
 	@RolesAllowed({"ADMINISTRATOR_ADMINISTRATOR", "APP_USER2__ALL", "APP_USER2__READ"})
 	public String listAll(int pageSize, int page){
 	
@@ -90,7 +101,6 @@ public class User2ServiceImpl implements User2Service{
 	}
 	
 	@Override
-	@RolesAllowed({"ADMINISTRATOR_ADMINISTRATOR", "APP_USER2__ALL", "APP_USER2__CREATE"})
 	public String insert(User2 user2){
 		return gson.toJson(user2Repository.insert(user2));
 	}

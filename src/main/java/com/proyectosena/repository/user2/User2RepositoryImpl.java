@@ -62,6 +62,30 @@ public class User2RepositoryImpl implements User2Repository{
 	}
 	
 	/**
+	 * Metodo de consulta para los registros de la tabla User2 por id
+	 * @value id = id de la llave primaria a consultar el registro
+	 * @return User2 = objeto de la case User2 que contiene los datos encontrados dado el id
+	 * @throws Exception
+	 */
+	@Override
+	@Transactional
+	public User2 listUser(String username){
+		try{
+			String sql = "select "+User2.getColumnNames()
+					   + "from User_2 "
+					   + "where user_nick = :username ";
+						
+			Query query = getSession().createSQLQuery(sql)
+						 .addEntity(User2.class)					
+					     .setParameter("username", username);
+			return (User2)query.uniqueResult();
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	/**
 	 * Metodo de consulta para los registros de la tabla User2
 	 * @return User2 = coleccion de objetos de la case User2 que contiene los datos encontrados
 	 * @throws Exception

@@ -13,7 +13,7 @@
                             <i style="color:#9FEEFF" class="fa fa-user"> </i>
                             	<font style="color:#0B72FF">
                                 <sec:authentication var="principal" property="principal" />
-								<a style="color:#0B72FF" href="#/perfil.jsp" /> ${principal.username}</a>
+								<a style="color:#0B72FF" href="#/Perfil" /> ${principal.username}</a>
 								<i style="color:#9FEEFF" class="fa fa-key"> </i>
 								<a style="color:#0B72FF" href="<c:url value="j_spring_security_logout"/>" > Logout</a>	
 								</font>						                                                  
@@ -180,14 +180,12 @@
                     </center>
                 </div>
 
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.jsp#/Index">Inicio</a></li>
-                        <li><a href="#/Repuesto">Repuestos</a></li>
-                        <li><a href="#/Servicio">Servicios</a></li>
-                        <li><a href="#/Contacto">Contacto</a></li>
-                        <li><a href="#/Perfil">Perfil</a></li>
-                        
+                <div class="col-xs-12  col-sm-4">
+                    <ul class="pull-right">
+                        <li><a href="Index.html">Inicio</a></li>
+                        <li><a href="Nosotros.html">Nosotros</a></li>
+                        <li><a href="Ayuda.html">Ayuda</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>

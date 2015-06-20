@@ -59,6 +59,15 @@ public class User2 {
 	 
 	@Column(name = "USER_ENABLED")
 	protected String user_enabled; 
+	
+	@Column(name = "USER_SEXO")
+	protected String user_sexo; 
+	
+	@Column(name = "USER_EMAIL")
+	protected String user_email; 
+
+	@Column(name = "USER_UBICACION")
+	protected String user_ubicacion; 
 
 	public User2(){
 	
@@ -135,14 +144,38 @@ public class User2 {
 	public void setUser_enabled(String user_enabled){
 		this.user_enabled = user_enabled;
 	}
+	
+	public String getUser_sexo(){
+		return user_sexo;
+	}
+	
+	public void setUser_sexo(String user_sexo){
+		this.user_sexo = user_sexo;
+	}
+	
+	public String getUser_email(){
+		return user_email;
+	}
+	
+	public void setUser_email(String user_email){
+		this.user_email = user_email;
+	}
+	
+	public String getUser_ubicacion(){
+		return user_ubicacion;
+	}
+	
+	public void setUser_ubicacion(String user_ubicacion){
+		this.user_ubicacion = user_ubicacion;
+	}
 
 
 	static public String[] getNames(){
-		return new String[]{ "USER_USER", "USER_NOMBRE", "USER_APELLIDO", "USER_TELEFONO", "USER_CEDULA", "USER_DIRECCION", "USER_NICK", "USER_PASS", "USER_ENABLED" };
+		return new String[]{ "USER_USER", "USER_NOMBRE", "USER_APELLIDO", "USER_TELEFONO", "USER_CEDULA", "USER_DIRECCION", "USER_NICK", "USER_PASS", "USER_ENABLED", "USER_SEXO", "USER_EMAIL", "USER_UBICACION" };
 	}		
 	
 	static public String getColumnNames(){
-		return " USER_USER, USER_NOMBRE, USER_APELLIDO, USER_TELEFONO, USER_CEDULA, USER_DIRECCION, USER_NICK, USER_PASS, USER_ENABLED ";
+		return " USER_USER, USER_NOMBRE, USER_APELLIDO, USER_TELEFONO, USER_CEDULA, USER_DIRECCION, USER_NICK, USER_PASS, USER_ENABLED, USER_SEXO, USER_EMAIL, USER_UBICACION ";
 	}
 	
 	public String toString(){
@@ -154,6 +187,9 @@ public class User2 {
 			+" USER_DIRECCION: "+ this.user_direccion 
 			+" USER_NICK: "+ this.user_nick 
 			+" USER_PASS: "+ this.user_pass 
-			+" USER_ENABLED: "+ this.user_enabled ;
+			+" USER_ENABLED: "+ this.user_enabled
+			+" USER_SEXO: "+ this.user_sexo
+			+" USER_EMAIL: "+ this.user_email
+			+" USER_UBICACION: "+ this.user_ubicacion;
 	}
 }

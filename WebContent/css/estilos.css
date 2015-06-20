@@ -1,23 +1,30 @@
 #perfil {
-	color: #fff;
+    color: #fff;
+}
+.btn-color {
+    background-color: #A6080A;
+    border: #A6080A;
+}
+.btn-color:hover {
+    background-color: #13A8FE;
 }
 .form-control, .btn {
-    border-radius: 0px;
+    box-shadow: 5px;
     height: 40px;
 }
 .h2 {
-	margin: 50px 0;
-	color: #fff;
+    margin: 50px 0;
+    color: #fff;
 }
 .h2-registro {
     font-size: 32px;
     margin-bottom: 30px;
 }
 .img_perfil {
-	border-radius: 50%;
-	height: auto;
-	margin: 40px 0;
-	width: 150px;
+    border-radius: 50%;
+    height: auto;
+    margin: 40px 0;
+    width: 150px;
 }
 .margin {
     margin: 10px 0;
@@ -28,3 +35,4 @@
 .tex-color {
     color: #fff;
 }
+

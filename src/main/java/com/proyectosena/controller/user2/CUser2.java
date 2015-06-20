@@ -4,6 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
+
+
 
 
 import com.proyectosena.service.user2.User2Service;
@@ -38,13 +42,24 @@ public class CUser2 {
 		return "/index/index";
 	}
 	
+	@RequestMapping("/Repuesto")
+	public String indexxx() {
+		return "/repuesto/repuesto";
+	}
+	
 	
 	@RequestMapping("/Perfil")
 	public String indexxxxx() {
 		return "/perfil/perfil";
 	}
 	
-	
+	@RequestMapping(value = "/listUser.json", method = RequestMethod.GET, produces={"application/json"})
+	@ResponseBody
+	public String listUser(){
+		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		return this.user2Service.listUser(auth.getName());
+	}
 	
 	@RequestMapping(value = "/{user_user}.json", method = RequestMethod.GET, produces={"application/json"})
 	@ResponseBody
@@ -82,6 +97,7 @@ public class CUser2 {
 	@ResponseBody
 	public String insert(@RequestBody User2 user2, HttpServletRequest request){
 		
+		user2.setUser_enabled("1");
 		return this.user2Service.insert(user2);		
 	}
 }

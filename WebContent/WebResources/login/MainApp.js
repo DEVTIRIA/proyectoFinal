@@ -38,6 +38,13 @@ MainApp.config(['$routeProvider',
   	      controller: 'loginController'
   	    }).
   	    
+  	  when('/Repuesto', {
+  	      templateUrl: function(params) {
+  	          return  WEB_SERVER+'User2/Repuesto';
+  	      },
+  	      controller: 'repuestoController'
+  	    }).
+  	    
   	       	  
    	    
    	    when('/FrmPerfil', {

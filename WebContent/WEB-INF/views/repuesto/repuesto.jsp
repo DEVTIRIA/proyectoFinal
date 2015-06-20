@@ -1,7 +1,6 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<div data-ng-controller="perfilController" data-ng-init="init()">
-<header id="header">
+<header id="header" data-ng-controller="contactoController">
         <div class="top-bar bottom">
             <div class="container">
                 <div class="row">
@@ -38,43 +37,72 @@
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li><a href="index.jsp#/Index">Inicio</a></li>
-                        <li><a href="#/Repuesto">Repuestos</a></li>
+                        <li class="active"><a href="#/Repuesto">Repuestos</a></li>
                         <li><a href="#/Servicio">Servicios</a></li>
                         <li><a href="#/Contacto">Contacto</a></li>
-                        <li class="active"><a href="#/Perfil">Perfil</a></li>
+                        <li><a href="#/Perfil">Perfil</a></li>
                         
                     </ul>
                 </div>
             </div><!--container-->
         </nav><!--nav-->
         
-    </header><!--header-->	
-	     <section id="perfil" style="color:#FFFFFF">
-        <div class="container">
-            <div class="col-md-4 col-md-offset-4 text-center">
-                <img class="img_perfil" src="images/perfil.png" alt="">
-            </div>
-            <div class="col-xs-12">
-                <h2 class="text-center h2">Información Personal</h2>
-            </div>
-            <div class="col-sm-6 col-sm-offset-3">
-            	Identificacion: {{user_cedula}} <br>
-            	Nombre: {{user_nombre}}  <br>
-            	Apellido: {{user_apellido}} <br>
-                Ubicación: {{user_ubicacion}}<br>
-                Dirección: {{user_direccion}}<br> 
-                Correo electronico: {{user_email}} <br><br>
-                Sexo: {{ user_sexo}}<br>
-                
-                <span class="icon-skype"></span> Usuario: {{user_nick}} <br>
-                <span class="icon-mobile"></span> Telefono: {{user_telefono}}
-            </div>
-            
+    </header><!--header-->
+	<div data-ng-view></div> 
 
+    <section>
+        <div class="container">
+            <div class="row">
+                <h2 class="h2 text-center">Seleccione de la lista el pruducto que esta buscando</h2><br><br>
+            </div>
+            <div class="row">
+                <form action="">
+                    <div class="col-sm-4">
+                        <label for="" class="tex-color">Marca: </label>
+                        <select name="" id="" class="form-control">
+                            <option value="">Todas</option>
+                            <option value="">Yamaha</option>
+                            <option value="">Kawasaki</option>
+                            <option value="">Honda</option>
+                            <option value="">Bajaj</option>
+                            <option value="">KTM</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="" class="tex-color">Referencia: </label>
+                        <select name="" id="" class="form-control">
+                            <option value="">Todas</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="" class="tex-color">Accesorio: </label>
+                        <select name="" id="" class="form-control">
+                            <option value="">Todos</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-12 text-center"><br><br>
+                        <button class="btn btn-danger btn-color">Buscar</button>
+                    </div>
+                    
+                </form>
+                
+                
+                
+            </div>
         </div>
-    </section>
+    </section>    
     
-   <footer id="footer" class="midnight-blue">
+    <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-5">
@@ -100,5 +128,4 @@
                 </div>
             </div>
         </div>
-    </footer><!--/#footer-->
-    </div>
+    </footer><!--/#footer-->    

@@ -51,6 +51,8 @@
         <script  src="WebResources/catalogo/catalogoController.js"></script>
         <script  src="WebResources/catalogo/catalogoService.js"></script>
     
+    	<script  src="WebResources/perfil/perfilController.js"></script>
+        <script  src="WebResources/perfil/perfilService.js"></script>
 </head>
 <body>
 
