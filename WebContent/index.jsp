@@ -29,6 +29,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
     
+    
+    
     	<script >var WEB_SERVER='http://localhost:8080/baseWeb/sena/';</script>
         
         <script  src="lib/angular-1.3.15/angular.js"></script>              

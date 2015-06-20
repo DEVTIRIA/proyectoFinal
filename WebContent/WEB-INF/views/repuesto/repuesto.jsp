@@ -72,32 +72,69 @@
                         <label for="" class="tex-color">Referencia: </label>
                         <select name="" id="" class="form-control">
                             <option value="">Todas</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
+                            <option value="">Z1000</option>
+                            <option value="">R1</option>
+                            <option value="">CBR 250</option>
+                            <option value="">Pulsar 200</option>
+                            <option value="">Duke 390</option>
                         </select>
                     </div>
                     <div class="col-sm-4">
                         <label for="" class="tex-color">Accesorio: </label>
                         <select name="" id="" class="form-control">
                             <option value="">Todos</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
+                            <option value="">Espejo</option>
+                            <option value="">Carenaje</option>
+                            <option value="">Unidad</option>
+                            <option value="">Stop</option>
+                            <option value="">Tablero</option>
                         </select>
                     </div>
                     <div class="col-sm-12 text-center"><br><br>
                         <button class="btn btn-danger btn-color">Buscar</button>
+                        <br><br>
                     </div>
                     
                 </form>
+                <div>
                 
-                
-                
+                <div class="table-responsive">
+  					<table class="table table-bordered" style="color:#FFFFFF">
+				    <thead>
+				      <tr>
+				        <th>Tienda</th>
+				        <th>Direccion</th>
+				        <th>Telefono</th>
+				        <th>Precio</th>
+				        <th>Ciudad</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>Moto GP</td>
+				        <td>Call 23</td>
+				        <td>1252321</td>
+				        <td>$200.000</td>
+				        <td>Bogota</td>
+				      </tr>
+				      <tr>
+				        <td>Moto GP</td>
+				        <td>Call 23</td>
+				        <td>1252321</td>
+				        <td>$200.000</td>
+				        <td>Bogota</td>
+				      </tr>
+				      <tr>
+				        <td>Moto GP</td>
+				        <td>Call 23</td>
+				        <td>1252321</td>
+				        <td>$200.000</td>
+				        <td>Bogota</td>
+				      </tr>
+				    </tbody>
+				  </table>
+				</div>
+
             </div>
         </div>
     </section>    

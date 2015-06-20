@@ -158,7 +158,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-5">
-                <center>&copy; 2015 <a target="_blank" href="http://www.facebook.com/billy.hetfieldd" title="">Bill Santamaria</a>. All Rights Reserved.
+                <center>&copy; 2015 <a target="_blank" href="http://www.facebook.com/billy.hetfieldd" title="">Bill Santamaria - Yeik Santamaria - Alejandro Tiria</a>. All Rights Reserved.
                 </center></div>
 
                 <div class="col-xs-11 col-sm-3 center-block">

@@ -60,6 +60,10 @@ hr {
   border-bottom: 1px solid #fff;
 }
 
+.table-hover{
+	background: #2677FE;
+}
+
 
 .btn-primary {
   padding: 8px 20px;
